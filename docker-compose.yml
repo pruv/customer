@@ -1,8 +1,0 @@
-customer:
- build: https://hub.docker.com/r/pruv/customerapp/
- ports:
-  - "8080"
- links:
-  - mongodb
-mongodb:
- image: mongo
