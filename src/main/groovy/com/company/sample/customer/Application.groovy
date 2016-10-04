@@ -31,6 +31,7 @@ public class Application {
     public Docket customerApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("customer")
+                .ignoredParameterTypes(MetaClass)
                 .apiInfo(apiInfo())
                 .select()
                 .paths(regex("/v1.*"))
