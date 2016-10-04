@@ -82,6 +82,7 @@
     </dependencies>
 
     <build>
+	<finalName>${project.artifactId}</finalName>
         <sourceDirectory>${project.basedir}/src/main/groovy</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/groovy</testSourceDirectory>
         <plugins>
