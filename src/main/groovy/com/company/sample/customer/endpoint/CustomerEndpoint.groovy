@@ -27,7 +27,7 @@ class CustomerEndpoint {
     }
 
     @RequestMapping(method = RequestMethod.POST, path="/customer", produces = "application/json")
-    @ApiOperation(value = "Add an item to the basket")
+    @ApiOperation(value = "Add customer")
     @ApiResponses([
             @ApiResponse(code = 400, message = "bad data in customer request, failed add customer business rules")
     ])
@@ -37,7 +37,7 @@ class CustomerEndpoint {
     }
 
     @RequestMapping(method = RequestMethod.PATCH, path="/customer/{customerId}", produces = "application/json")
-    @ApiOperation(value = "Updates an item in the basket")
+    @ApiOperation(value = "Update customer")
     @ApiResponses([
             @ApiResponse(code = 400, message = "Missing customerId query param"),
             @ApiResponse(code = 404, message = "Unable to find customer based on customerId")
@@ -47,7 +47,7 @@ class CustomerEndpoint {
     }
 
     @RequestMapping(method = RequestMethod.DELETE, path="/customer/{customerId}", produces = "application/json")
-    @ApiOperation(value = "Delete the basket")
+    @ApiOperation(value = "Delete customer")
     @ApiResponses([
             @ApiResponse(code = 204, message = "Operation succeeded.  No body to return."),
             @ApiResponse(code = 400, message = "Missing customerId query param"),
